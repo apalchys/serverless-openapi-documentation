@@ -69,6 +69,12 @@ export class ServerlessOpenApiDocumentation {
         documentation: { type: 'object' },
       },
     });
+
+    this.serverless.configSchemaHandler.defineFunctionEventProperties('aws', 'http', {
+      properties: {
+        documentation: { type: 'object' },
+      },
+    });
   }
 
   log: ILog = (...str: string[]) => {
