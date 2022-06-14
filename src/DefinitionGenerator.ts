@@ -64,7 +64,10 @@ export class DefinitionGenerator {
         }
         if (model.tsSchema) {
           const program = TJS.getProgramFromFiles([resolve(model.tsSchema.filePath)], {});
-          model.schema = TJS.generateSchema(program, model.tsSchema.typeName);
+          model.schema = TJS.generateSchema(program, model.tsSchema.typeName, {
+            noExtraProps: true,
+            required: true,
+          });
           delete model.tsSchema;
         }
         this.definition.components.schemas[model.name] = this.cleanSchema(dereference(model.schema));

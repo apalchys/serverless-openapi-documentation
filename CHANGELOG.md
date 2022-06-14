@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Enable `required` and `noExtraProps` for `typescript-json-schema`
+
 ## [0.5.3][] - 2022-05-22
 
 - Fix typo
